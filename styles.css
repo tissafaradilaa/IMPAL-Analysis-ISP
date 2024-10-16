@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e6e6e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.ussd-container {
+    width: 300px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border: 1px solid #ccc;
+}
+
+.ussd-screen {
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.ussd-screen p {
+    margin: 0 0 20px;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Mengatur lebar dan margin dari input */
+.ussd-screen input {
+    width: 90%; /* Sesuaikan lebar garis di bawah input */
+    margin-left: auto; /* Memusatkan input secara horizontal */
+    margin-right: auto;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #000;
+    font-size: 16px;
+    outline: none;
+}
+
+.ussd-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.ussd-footer button {
+    width: 45%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cancel {
+    background-color: #ff4d4d;
+    color: #fff;
+}
+
+.send {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.cancel:hover {
+    background-color: #cc0000;
+}
+
+.send:hover {
+    background-color: #218838;
+}
+
+/* Class untuk menyembunyikan layar */
+.hidden {
+    display: none;
+}
