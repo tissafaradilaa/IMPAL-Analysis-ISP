@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USSD Menu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="ussd-container">
+        <!-- Tampilan Awal Pilihan Transaksi -->
+        <div id="menuScreen" class="ussd-screen">
+            <p>Mau iPhone 15Plus dr Saskia Chadwick?<br>Hub *500*117#</p>
+            <p>1. Transfer Pulsa<br>2. Minta Pulsa<br>3. Auto TP<br>4. Delete Auto TP<br>5. List Auto TP<br>6. Cek Kupon Undian TP</p>
+            <input type="text" id="userInput" placeholder="Masukkan pilihan Anda...">
+        </div>
+
+        <!-- Tampilan Masukkan Nomor untuk Transfer Pulsa -->
+        <div id="inputTransferScreen" class="ussd-screen hidden">
+            <p>Silahkan masukkan nomor tujuan Transfer Pulsa:</p>
+            <input type="text" id="transferInput" placeholder="Nomor tujuan">
+        </div>
+
+        <!-- Tampilan Masukkan Nomor untuk Minta Pulsa -->
+        <div id="inputMintaPulsaScreen" class="ussd-screen hidden">
+            <p>Silahkan masukkan nomor untuk Minta Pulsa:</p>
+            <input type="text" id="mintaPulsaInput" placeholder="Nomor tujuan">
+        </div>
+
+        <!-- Tampilan Masukkan Nomor untuk Auto TP -->
+        <div id="inputAutoTPScreen" class="ussd-screen hidden">
+            <p>Silahkan masukkan nomor untuk Auto TP:</p>
+            <input type="text" id="autoTPInput" placeholder="Nomor tujuan">
+        </div>
+
+        <!-- Tampilan Hapus Auto TP -->
+        <div id="inputDeleteTPScreen" class="ussd-screen hidden">
+            <p>Silahkan masukkan nomor untuk menghapus Auto TP:</p>
+            <input type="text" id="deleteTPInput" placeholder="Nomor tujuan">
+        </div>
+
+        <!-- Tampilan Daftar Auto TP -->
+        <div id="listAutoTPScreen" class="ussd-screen hidden">
+            <p>Daftar nomor Auto TP aktif:</p>
+            <ul id="listAutoTP">
+                <!-- Daftar akan diisi dengan JavaScript -->
+            </ul>
+        </div>
+
+        <!-- Tampilan Cek Kupon Undian TP -->
+        <div id="kuponUndianScreen" class="ussd-screen hidden">
+            <p>Kupon Undian TP Anda:</p>
+            <span id="kuponUndian">KU123456789</span> <!-- Hasil cek kupon -->
+        </div>
+
+        <!-- Tampilan Konfirmasi Berhasil -->
+        <div id="successScreen" class="ussd-screen hidden">
+            <p><span id="transactionMessage"></span> berhasil!</p>
+        </div>
+
+        <!-- Tampilan Masukkan Nominal Pulsa -->
+        <div id="inputNominalScreen" class="ussd-screen hidden">
+            <p>Silahkan masukkan nominal pulsa:</p>
+            <input type="text" id="nominalInput" placeholder="Nominal Pulsa">
+        </div>
+
+        <!-- Footer untuk tombol Cancel dan Send -->
+        <div class="ussd-footer">
+            <button class="cancel" onclick="resetForm()">Cancel</button>
+            <button class="send" onclick="handleSend()">Send</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
